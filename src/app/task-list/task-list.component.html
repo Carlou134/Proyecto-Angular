@@ -1,0 +1,29 @@
+@if (isLoading) {
+  <p>Cargando tareas...</p>
+}
+@else {
+  <p>Lista de tareaas</p>
+}
+
+<ul>
+  @for (task of tasks; track task) {
+    <li> {{ task }} </li>
+  } @empty {
+    <li>No hay tareas</li>
+  }
+</ul>
+
+@switch (status) {
+  @case ("pending") {
+    <p>Tareas pendientes</p>
+  }
+  @case ("done") {
+    <p>Todas completadas!!!</p>
+  }
+  @default {
+    <p>Error al cargar</p>
+  }
+}
+
+<input type="text" #taskInput>
+<button>Mostrar lo que escribiste</button>
