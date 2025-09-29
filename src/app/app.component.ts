@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ParentComponent } from './parent/parent.component';
+import { UserEditorComponent } from './user-editor/user-editor.component';
+import { UserDisplayComponent } from './user-display/user-display.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ParentComponent],
+  imports: [RouterOutlet, UserEditorComponent, UserDisplayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Proyecto-Angular';
   theme = "light";
+  userName = "Carlos";
 
   changeTheme($event: Event){
     this.theme = (this.theme == "light") ? "dark" : "light";
