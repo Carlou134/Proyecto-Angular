@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserEditorComponent } from './user-editor/user-editor.component';
 import { UserDisplayComponent } from './user-display/user-display.component';
+import { ColorButtonComponent } from './color-button/color-button.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserEditorComponent, UserDisplayComponent],
+  imports: [RouterOutlet, UserEditorComponent, UserDisplayComponent, ColorButtonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

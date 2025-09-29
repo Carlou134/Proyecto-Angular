@@ -4,6 +4,8 @@
 <app-user-display [(name)]="userName"></app-user-display>
 <p>El nombre actual del usuario es: {{ userName }}</p>
 <hr>
+<app-color-button></app-color-button>
+<hr>
 <p>El tema actual es: {{ theme }}</p>
 <button (click)="changeTheme($event)">Cambiar Tema</button>
 @if (theme == "light") {
