@@ -14,4 +14,9 @@
 @else {
   <p>🌙 Modo oscuro activado</p>
 }
+<hr>
+<button [ngClass]="isActive ? 'active' : 'inactive'">Boton</button>
+<p [ngStyle]="{'font-size': fontSize + 'px'}">Texto dinamico</p>
+<button (click)="aumentarSize()">Aumentar tamaño</button>
+<button (click)="disminuirSize()">Disminuir tamaño</button>
 <router-outlet />

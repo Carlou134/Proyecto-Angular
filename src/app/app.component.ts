@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { UserEditorComponent } from './user-editor/user-editor.component';
 import { UserDisplayComponent } from './user-display/user-display.component';
 import { ColorButtonComponent } from './color-button/color-button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserEditorComponent, UserDisplayComponent, ColorButtonComponent],
+  imports: [RouterOutlet, UserEditorComponent,
+    UserDisplayComponent, ColorButtonComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,6 +17,8 @@ export class AppComponent {
   title = 'Proyecto-Angular';
   theme = "light";
   userName = "Carlos";
+  isActive = false;
+  fontSize = 16;
 
   changeTheme($event: Event){
     this.theme = (this.theme == "light") ? "dark" : "light";
@@ -29,5 +33,13 @@ export class AppComponent {
       document.body.style.backgroundColor = "black"
       document.body.style.color = "white"
     }
+  }
+
+  aumentarSize(){
+    this.fontSize++;
+  }
+
+  disminuirSize(){
+    this.fontSize--;
   }
 }
