@@ -1,2 +1,10 @@
-<app-user-profile></app-user-profile>
+<app-parent></app-parent>
+<p>El tema actual es: {{ theme }}</p>
+<button (click)="changeTheme($event)">Cambiar Tema</button>
+@if (theme == "light") {
+  <p>🌞 Modo claro activado</p>
+}
+@else {
+  <p>🌙 Modo oscuro activado</p>
+}
 <router-outlet />

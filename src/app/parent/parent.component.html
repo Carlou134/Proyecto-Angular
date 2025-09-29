@@ -1,0 +1,2 @@
+<p>Mensaje del hijo al padre: {{ mensaje }}</p>
+<app-child [childMessage]="'Hola hijo'" (messageSent)="onMessageReceived($event)"></app-child>
