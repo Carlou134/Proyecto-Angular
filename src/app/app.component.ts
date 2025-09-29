@@ -4,12 +4,15 @@ import { UserEditorComponent } from './user-editor/user-editor.component';
 import { UserDisplayComponent } from './user-display/user-display.component';
 import { ColorButtonComponent } from './color-button/color-button.component';
 import { CommonModule } from '@angular/common';
+import { RotateDirective } from './rotate.directive';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, UserEditorComponent,
-    UserDisplayComponent, ColorButtonComponent, CommonModule],
+    UserDisplayComponent, ColorButtonComponent, CommonModule, RotateDirective,
+    HighlightDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

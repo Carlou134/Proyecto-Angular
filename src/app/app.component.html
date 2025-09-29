@@ -19,4 +19,9 @@
 <p [ngStyle]="{'font-size': fontSize + 'px'}">Texto dinamico</p>
 <button (click)="aumentarSize()">Aumentar tamaño</button>
 <button (click)="disminuirSize()">Disminuir tamaño</button>
+<hr>
+<img src="https://img.freepik.com/vector-premium/persona-camisa-azul-que-dice-nombre-persona_1029948-7040.jpg?semt=ais_hybrid&w=740&q=80" alt="user" [appRotate]="90">
+<hr>
+<p appHighlight>Este texto se puede resaltar al hacer click</p>
+<p appHighlight [highlightColor]="'red'">Este texto se puede resaltar de rojo</p>
 <router-outlet />
