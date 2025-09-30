@@ -6,13 +6,14 @@ import { ColorButtonComponent } from './color-button/color-button.component';
 import { CommonModule } from '@angular/common';
 import { RotateDirective } from './rotate.directive';
 import { HighlightDirective } from './highlight.directive';
+import { ReversePipe } from './reverse.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, UserEditorComponent,
     UserDisplayComponent, ColorButtonComponent, CommonModule, RotateDirective,
-    HighlightDirective],
+    HighlightDirective, ReversePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -22,6 +23,9 @@ export class AppComponent {
   userName = "Carlos";
   isActive = false;
   fontSize = 16;
+  today = new Date();
+  balance = 1234.567;
+  word = "Hola Mundo";
 
   changeTheme($event: Event){
     this.theme = (this.theme == "light") ? "dark" : "light";

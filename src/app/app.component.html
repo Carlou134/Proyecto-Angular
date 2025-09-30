@@ -24,4 +24,9 @@
 <hr>
 <p appHighlight>Este texto se puede resaltar al hacer click</p>
 <p appHighlight [highlightColor]="'red'">Este texto se puede resaltar de rojo</p>
+<hr>
+<h1>Bienvenido {{ userName | uppercase }}</h1>
+<p>Date: {{ today | date }}</p>
+<p>Saldo: {{ balance | currency:'USD'}}</p>
+<p> {{ word | reverse:true}} </p>
 <router-outlet />
